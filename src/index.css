@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.car-move {
+  animation: move;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.car-bounce {
+  animation: bounce;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+
+
+/* translucent effect */
+.glass {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@keyframes move {
+  0% {
+    left: -50px;
+  }
+  20% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    left: -50px;
+  }
+  40% {
+    left: calc(30% - 25px);
+  }
+  45% {
+    transform: translatey(5px);
+  }
+  50% {
+    transform: translatey(-5px);
+  }
+  55% {
+    transform: translatey(5px);
+  }
+  60% {
+    transform: translatey(0px);
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+
+
+
